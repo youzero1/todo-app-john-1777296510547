@@ -7,9 +7,10 @@ type TodoInputProps = {
   onAdd: (text: string) => void;
   onToggleAll: () => void;
   hasTodos: boolean;
+  inputRef?: React.RefObject<HTMLInputElement>;
 };
 
-export default function TodoInput({ onAdd, onToggleAll, hasTodos }: TodoInputProps) {
+export default function TodoInput({ onAdd, onToggleAll, hasTodos, inputRef }: TodoInputProps) {
   const [value, setValue] = useState('');
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -25,15 +26,16 @@ export default function TodoInput({ onAdd, onToggleAll, hasTodos }: TodoInputPro
           type="button"
           className={styles.toggleAll}
           onClick={onToggleAll}
-          title="Toggle all"
+          title="Toggle all (T)"
         >
           <ChevronsDown size={18} />
         </button>
       )}
       <input
+        ref={inputRef}
         className={clsx(styles.input, hasTodos && styles.inputWithToggle)}
         type="text"
-        placeholder="What needs to be done?"
+        placeholder="What needs to be done? (Press / to focus)"
         value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
         autoFocus
