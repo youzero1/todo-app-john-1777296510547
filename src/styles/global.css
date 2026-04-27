@@ -5,10 +5,10 @@
 }
 
 :root {
-  --color-primary: #6366f1;
-  --color-primary-hover: #4f46e5;
+  --color-primary: #f97316;
+  --color-primary-hover: #ea6c0a;
   --color-secondary: #64748b;
-  --color-background: #f1f5f9;
+  --color-background: #fff7ed;
   --color-surface: #ffffff;
   --color-border: #e2e8f0;
   --color-text: #1e293b;

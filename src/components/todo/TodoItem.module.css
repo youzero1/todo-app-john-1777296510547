@@ -107,7 +107,7 @@
 }
 
 .editBtn:hover {
-  background-color: #ede9fe;
+  background-color: #ffedd5;
   color: var(--color-primary);
 }
 
