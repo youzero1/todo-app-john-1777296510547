@@ -57,3 +57,27 @@
   border-color: var(--color-primary);
   background: var(--color-primary-light);
 }
+
+.shortcutsHint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 0.3rem;
+  margin-left: 0.15rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.shortcutsBtn:hover .shortcutsHint {
+  background: var(--color-primary);
+  color: #fff;
+}

@@ -110,6 +110,7 @@ export default function Home() {
         >
           <Keyboard size={16} />
           <span>Shortcuts</span>
+          <kbd className={styles.shortcutsHint}>?</kbd>
         </button>
       </div>
 
