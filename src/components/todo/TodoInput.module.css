@@ -1,0 +1,69 @@
+.form {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: transparent;
+  padding: 0.5rem 0.75rem;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.inputWithToggle {
+  padding-left: 0.25rem;
+}
+
+.toggleAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.toggleAll:hover {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  flex-shrink: 0;
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.addButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

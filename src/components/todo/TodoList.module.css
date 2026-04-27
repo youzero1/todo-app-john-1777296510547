@@ -1,0 +1,16 @@
+.list {
+  list-style: none;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.emptyFilter {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}

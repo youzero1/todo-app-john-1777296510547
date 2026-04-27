@@ -1,0 +1,130 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.15s;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background-color: var(--color-background);
+}
+
+.item.completed {
+  opacity: 0.7;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s, background-color 0.15s;
+  color: #fff;
+}
+
+.checkbox:hover {
+  border-color: var(--color-primary);
+}
+
+.checkboxChecked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  word-break: break-word;
+  cursor: default;
+}
+
+.textCompleted {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.date {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.editInput {
+  width: 100%;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.4rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  outline: none;
+  background: var(--color-surface);
+}
+
+.actions {
+  display: flex;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.editBtn {
+  color: var(--color-secondary);
+}
+
+.editBtn:hover {
+  background-color: #ede9fe;
+  color: var(--color-primary);
+}
+
+.cancelBtn {
+  color: var(--color-secondary);
+}
+
+.cancelBtn:hover {
+  background-color: #fee2e2;
+  color: var(--color-danger);
+}
+
+.deleteBtn {
+  color: var(--color-secondary);
+}
+
+.deleteBtn:hover {
+  background-color: #fee2e2;
+  color: var(--color-danger);
+}
